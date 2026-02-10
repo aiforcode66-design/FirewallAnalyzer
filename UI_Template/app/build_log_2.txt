@@ -1,0 +1,27 @@
+
+> my-app@0.0.0 build
+> tsc -b && vite build
+
+src/components/features/ContextDashboard.tsx(5,5): error TS6133: 'Shield' is declared but its value is never read.
+src/components/features/ContextDashboard.tsx(7,5): error TS6133: 'AlertCircle' is declared but its value is never read.
+src/components/features/ContextDashboard.tsx(15,5): error TS6133: 'ArrowRight' is declared but its value is never read.
+src/components/features/ContextDashboard.tsx(16,5): error TS6133: 'AlertTriangle' is declared but its value is never read.
+src/components/features/ContextDashboard.tsx(22,1): error TS6133: 'cn' is declared but its value is never read.
+src/components/features/MigrationWizard.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/ProtectedRoute.tsx(7,10): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/tuner/RuleComparison.tsx(3,22): error TS6133: 'CheckCircle2' is declared but its value is never read.
+src/components/tuner/RuleComparison.tsx(5,52): error TS6133: 'CardDescription' is declared but its value is never read.
+src/contexts/AuthContext.tsx(5,8): error TS6133: 'React' is declared but its value is never read.
+src/contexts/AuthContext.tsx(5,65): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/pages/Changes.tsx(51,30): error TS2305: Module '"@/services/changeService"' has no exported member 'Change'.
+src/pages/Changes.tsx(78,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ pending: { icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>; color: string; bg: string; label: string; }; approved: { ...; }; rejected: { ...; }; implemented: { ...; }; }'.
+src/pages/Changes.tsx(79,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ add: { color: string; bg: string; label: string; }; modify: { color: string; bg: string; label: string; }; delete: { color: string; bg: string; label: string; }; }'.
+src/pages/Changes.tsx(256,27): error TS2339: Property 'createChange' does not exist on type '{ getChanges: (params?: ChangeQueryParams) => Promise<ChangeRecord[]>; getChange: (id: string) => Promise<ChangeRecord>; updateStatus: (id: string, status: "approved" | ... 1 more ... | "implemented") => Promise<...>; }'.
+src/pages/Changes.tsx(289,27): error TS2339: Property 'deleteChange' does not exist on type '{ getChanges: (params?: ChangeQueryParams) => Promise<ChangeRecord[]>; getChange: (id: string) => Promise<ChangeRecord>; updateStatus: (id: string, status: "approved" | ... 1 more ... | "implemented") => Promise<...>; }'.
+src/pages/DeviceDetail.tsx(12,5): error TS6133: 'ArrowRight' is declared but its value is never read.
+src/pages/DeviceDetail.tsx(37,1): error TS6192: All imports in import declaration are unused.
+src/pages/DeviceMasterDetail.tsx(15,1): error TS6192: All imports in import declaration are unused.
+src/pages/DeviceMasterDetail.tsx(28,5): error TS6133: 'DialogTrigger' is declared but its value is never read.
+src/pages/DeviceMasterDetail.tsx(525,1): error TS6133: 'useParams' is declared but its value is never read.
+src/pages/Reports.tsx(67,1): error TS6133: 'toast' is declared but its value is never read.
+src/services/chartService.ts(27,33): error TS6133: 'deviceId' is declared but its value is never read.

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: firewall_backend_hybrid
+    ports:
+      - "8000:8000"
+    environment:
+      # IMPORTANT: Replace 'postgres:postgrespassword' with your LOCAL database credentials
+      # 'host.docker.internal' points to your localhost from inside the container
+      DATABASE_URL: postgresql://postgres:Kutil_1007341@host.docker.internal:5433/firewall_analyzer
+      SECRET_KEY: Kutil_1007341
+      DEBUG: "True"
+      CORS_ORIGINS: http://localhost:3000,http://localhost:80
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: >
+      sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: 
+      context: ./UI_Template/app
+      dockerfile: Dockerfile
+    container_name: firewall_frontend_hybrid
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
